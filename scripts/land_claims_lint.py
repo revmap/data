@@ -53,8 +53,8 @@ for feat in data["features"]:
         print("ERROR: Invalid Color:", feat["color"])
         feat_error = True
     # ------- POLYGON
-    if not "polygon" or "rectangle" in feat:
-        print("ERROR: LACKS polygon or rectangle",feat["name"])
+    if not "polygon" in feat:
+        print("ERROR: LACKS polygon")
         feat_error = True
     elif not type(feat["polygon"]) is list:
         print("ERROR: Invalid Claims Polygon")

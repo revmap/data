@@ -72,7 +72,7 @@ for feat in data["features"]:
     else:
         ids.append(feat["id"])
     # ------- CONTACT
-    if not feat.get("contact".lower(), ""):
+    if not feat.get.lower("contact", ""):
         print("ERROR: LACKS contact")
         feat_error = True
 

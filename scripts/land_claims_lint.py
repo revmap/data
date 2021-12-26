@@ -72,7 +72,7 @@ for feat in data["features"]:
     else:
         ids.append(feat["id"])
     # ------- CONTACT
-    if not feat.get("contact", ""):
+    if not feat.get("contact", feat.get("Contact", "")):
         print("ERROR: LACKS contact")
         feat_error = True
 
@@ -84,7 +84,7 @@ for feat in data["features"]:
         #    print("WARNING: LACKS shortname", feat["name"])
         if not "declutter" in feat:
             print("WARNING: LACKS declutter", feat["name"])
-        if not "discord" in feat:
+        if not feat.get("discord", feat.get("Discord", "")):
             print("WARNING: LACKS discord",feat["name"])
 
     if feat_error:
